@@ -74,6 +74,7 @@ Install dependencies:
 npm install
 
 Run the development server:
+npm run dev
 🗺️ Roadmap
 [ ] Daily habit tracker
 [ ] Academic tracker
