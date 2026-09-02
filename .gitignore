@@ -1,0 +1,14 @@
+*.iml
+.gradle
+/.gradle-bootstrap
+/.jdk-bootstrap
+/.wrapper-bootstrap
+/*.zip
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+**/build

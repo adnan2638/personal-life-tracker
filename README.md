@@ -57,10 +57,17 @@ measurable daily and weekly actions.
 
 ## 🛠️ Tech Stack
 
-- Frontend: [Technology]
-- Backend: [Technology]
-- Database: [Technology]
-- Authentication: [Technology]
+- Platform: Native Android
+- Language: Kotlin
+- UI: Jetpack Compose and Material 3
+- Architecture: Feature-oriented MVVM/Clean Architecture principles
+- Storage: Room
+- Settings: DataStore
+- Dependency injection: Hilt
+- Async/state: Coroutines and Flow
+- Navigation: Navigation Compose
+- Background work: WorkManager
+- Authentication / backend: None for the offline-first MVP
 
 ## 🚀 Getting Started
 
@@ -68,22 +75,18 @@ measurable daily and weekly actions.
 
 ```bash
 git clone <repository-url>
-cd <project-folder>
+cd personal-life-tracker
 
-Install dependencies:
-npm install
+# Open the project in Android Studio, then run the `app` configuration.
+# Or, with a configured Android SDK and JDK 17:
+./gradlew assembleDebug
+## 🗺️ Roadmap
 
-Run the development server:
-npm run dev
-🗺️ Roadmap
-[ ] Daily habit tracker
-[ ] Academic tracker
-[ ] Exam & syllabus tracker
-[ ] Phone-use tracking
-[ ] Reward system
-[ ] Weekly analytics
-[ ] Authentication
-[ ] Cloud database
-[ ] Mobile-friendly interface
-[ ] Advanced productivity analytics
+- [ ] Dashboard and daily habit tracking
+- [ ] Academic tracker, exams, and syllabus
+- [ ] Phone-use tracking and focus mode
+- [ ] Reward and accountability systems
+- [ ] Weekly analytics
+
+See `PROJECT_CONTEXT.md` for the approved architecture, constraints, and phased scope.
 
