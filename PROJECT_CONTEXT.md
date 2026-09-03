@@ -8,13 +8,13 @@ The product is not a generic scorekeeper: analytics must represent actual measur
 
 ## Current project status
 
-Phase 1A establishes the persistent and domain foundation for Tasks. There is still no Task UI, scheduler, recurrence, notification, analytics, goal, reward, or penalty behavior.
+Phase 1B adds the Compose Task vertical slice over the Phase 1A Room/domain foundation: task list, add/edit, details, category selection/creation, lifecycle actions, navigation, and a compact Dashboard entry point. No scheduler, recurrence, notification, analytics, goal, reward, or penalty behavior is implemented.
 
 ## Current MVP phase
 
-**Phase 1A — Task Foundation**
+**Phase 1B — Task UI**
 
-Scope: the Room task/category schema, DAOs, repositories, task/category CRUD use cases, validation, and unit-test foundation. Phase 1B is the Task UI checkpoint.
+Scope: Compose screens and ViewModel state for the existing Task foundation. The UI observes Room-backed repository Flows and delegates mutations to Phase 1A use cases.
 
 ## Approved tech stack
 
@@ -93,10 +93,11 @@ Feature order, schemas, and system permissions for subsequent phases require exp
 - Product README and Phase 0 project governance documentation.
 - Phase 0 Android/Compose foundation and Dashboard shell.
 - Phase 1A task/category Room schema, DAO, repository, domain use cases, validation, and unit-test source.
+- Phase 1B Tasks list, add/edit form, details screen, category selection/creation, task lifecycle actions, navigation routes, and Dashboard entry point.
 
 ## Deferred features
 
-Task UI, recurring tasks, missed-task scheduling, task notifications; exams, courses, syllabus and study tracking; math practice; ML sessions/timer; fitness and sleep tracking; Salah, Jama'ah, Qur'an, Hadith, and other Islamic activities; digital wellbeing and UsageStatsManager; focus mode/VPN blocking; rewards; penalties; goal engine; analytics; backup/import; cloud sync.
+Recurring tasks, missed-task scheduling, task notifications; exams, courses, syllabus and study tracking; math practice; ML sessions/timer; fitness and sleep tracking; Salah, Jama'ah, Qur'an, Hadith, and other Islamic activities; digital wellbeing and UsageStatsManager; focus mode/VPN blocking; rewards; penalties; goal engine; analytics; backup/import; cloud sync.
 
 ## Known limitations
 

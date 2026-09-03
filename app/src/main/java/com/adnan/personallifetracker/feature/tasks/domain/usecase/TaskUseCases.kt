@@ -55,5 +55,15 @@ class MarkTaskPartialUseCase(private val repository: TaskRepository, private val
     }
 }
 
+class StartTaskUseCase(private val repository: TaskRepository, private val now: () -> Long = System::currentTimeMillis) {
+    suspend operator fun invoke(id: String): Task {
+        val task = requireNotNull(repository.findTask(id)) { "Task does not exist." }
+        require(task.deletedAt == null) { "Archived tasks cannot be started." }
+        val startedTask = task.copy(status = TaskStatus.IN_PROGRESS, completionTiming = null, completedAt = null, updatedAt = now())
+        repository.update(startedTask)
+        return startedTask
+    }
+}
+
 class ArchiveTaskUseCase(private val repository: TaskRepository, private val now: () -> Long = System::currentTimeMillis) { suspend operator fun invoke(id: String) = repository.archive(id, now()) }
 class ObserveTasksUseCase(private val repository: TaskRepository) { operator fun invoke(): Flow<List<Task>> = repository.observeActiveTasks() }

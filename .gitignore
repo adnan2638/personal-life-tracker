@@ -1,5 +1,6 @@
 *.iml
 .gradle
+/.gradle-phase1b
 /.gradle-bootstrap
 /.jdk-bootstrap
 /.wrapper-bootstrap
